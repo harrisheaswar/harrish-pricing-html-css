@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: clamp(1rem, 1rem, 30px);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: hsl(233, 13%, 49%);
+}
+
+.container {
+  display: flex;
+  min-width: 1440px;
+  min-height: 810px;
+  justify-content: center;
+  background: hsl(240, 78%, 98%);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.container .content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  width: 80%;
+  height: 85%;
+  z-index: 2;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+.container .toggle-container {
+  display: flex;
+  min-width: 18%;
+  height: 3.5%;
+  font-size: clamp(15px, 1.7vh, 30px);
+}
+
+.container .toggle-container .toggle {
+  width: 35%;
+  height: 100%;
+  padding-right: 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .content-container .content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80%;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.container .content-container .content-box .content-basic,
+.container .content-container .content-box .content-professional,
+.container .content-container .content-box .content-master {
+  width: 30%;
+  min-height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(233, 13%, 49%);
+  background-color: white;
+  padding-bottom: 1vh;
+  padding: 1vh;
+}
+.container .content-container .content-box .content-basic {
+  border-top-left-radius: 3%;
+  border-bottom-left-radius: 3%;
+  box-shadow: 0 0.5vh 1vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container .content-container .content-box .content-professional {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 3%;
+  color: white;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.container .content-container .content-box .content-master {
+  border-top-right-radius: 3%;
+  border-bottom-right-radius: 3%;
+  box-shadow: 0 0.5vh 1vh;
+}
+
+.container .content-container .content-box .content-heading {
+  padding-bottom: 3vh;
+  padding-top: 2vh;
+  font-size: 2vh;
+  margin-bottom: 0px;
+}
+
+.container .content-container .content-box .content-professional .pricing {
+  color: White;
+}
+
+.container .content-container .content-box .content-details {
+  padding: 2vh;
+  border-bottom: 0.2vh solid hsl(234, 14%, 74%);
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 2vh;
+}
+.container .content-container .content-box .pricing {
+  border-bottom: 0.2vh solid hsl(234, 14%, 74%);
+  padding-bottom: 5vh;
+  font-size: 8vh;
+  color: black;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.container .content-container .content-box .currency {
+  font-size: 6vh;
+  margin-top: 2vh;
+  padding-right: 0.5vw;
+}
+
+/* Background images */
+
+.img-div1 {
+  position: absolute;
+  left: 80vw;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+}
+
+.img-div2 {
+  position: absolute;
+  left: 0rem;
+  top: 70vh;
+}
+
+/* toggle functionality */
+
+.container .toggle-container .toggle .button {
+  background: hsl(236, 72%, 79%);
+  width: 70%;
+  height: 95%;
+  margin-left: 2%;
+  border-radius: 2vh;
+  position: relative;
+  cursor: pointer;
+}
+
+.container .toggle-container .toggle .button:hover {
+  background-color: hsl(233, 49%, 82%);
+}
+
+.button::before {
+  content: "";
+  height: 90%;
+  width: 40%;
+  border-radius: 50%;
+  margin: 0.15vh;
+  transition: 0.2s;
+  background-color: white;
+  position: absolute;
+}
+
+input:checked + .button::before {
+  transform: translateX(3.3vh);
+}
+input {
+  display: none;
+}
+
+/* hover functionality and the learn more button */
+
+.learn-more {
+  width: 80%;
+  height: 10%;
+  border: none;
+  border-radius: 0.5vh;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 1.6vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 1.5vh;
+  cursor: pointer;
+}
+
+.container .content-container .content-box .content-professional .learn-more {
+  background: white;
+  color: hsl(233, 13%, 49%);
+}
+
+.learn-more:hover {
+  background: white;
+  color: hsl(233, 13%, 49%);
+  border: 0.2vh solid black;
+}
+
+.container
+  .content-container
+  .content-box
+  .content-professional
+  .learn-more:hover {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  border: 0.2vh solid white;
+}
+
+.toggle-text {
+  color: hsl(234, 14%, 74%);
+}
