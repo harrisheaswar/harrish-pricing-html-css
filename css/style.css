@@ -41,6 +41,7 @@ body {
   min-width: 18%;
   height: 3.5%;
   font-size: clamp(15px, 1.7vh, 30px);
+  outline: none;
 }
 
 .container .toggle-container .toggle {
@@ -51,6 +52,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
 }
 .container .content-container .content-box {
   display: flex;
@@ -161,10 +163,12 @@ body {
   border-radius: 2vh;
   position: relative;
   cursor: pointer;
+  outline: none;
 }
 
 .container .toggle-container .toggle .button:hover {
   background-color: hsl(233, 49%, 82%);
+  outline: none;
 }
 
 .button::before {
